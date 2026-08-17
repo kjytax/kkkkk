@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>김종엽 세무사 | 양도·상속·증여세 전문</title>
+<meta name="description" content="양도소득세, 상속세, 증여세 전문 세무사. 신고 대리부터 사전 절세 설계, 세무조사 대응까지 책임지고 상담해 드립니다.">
+<style>
+  :root{
+    --navy-900:#0b2239;
+    --navy-800:#123354;
+    --navy-700:#1b4571;
+    --navy-600:#28598c;
+    --accent:#b3894f;
+    --accent-soft:#e9dcc6;
+    --ink:#1a2430;
+    --ink-soft:#4a5766;
+    --ink-faint:#7b8794;
+    --line:#e3e7ec;
+    --bg:#ffffff;
+    --bg-tint:#f6f8fa;
+    --bg-deep:#0b2239;
+    --radius:14px;
+    --maxw:1120px;
+    --shadow-sm:0 1px 3px rgba(11,34,57,.06), 0 6px 18px rgba(11,34,57,.05);
+    --shadow-md:0 2px 6px rgba(11,34,57,.08), 0 18px 40px rgba(11,34,57,.09);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth; scroll-padding-top:76px}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Pretendard","Pretendard Variable",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR","Segoe UI",Roboto,sans-serif;
+    font-size:16px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    word-break:keep-all;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3,h4{
+    font-family:"Nanum Myeongjo","Apple SD Gothic Neo","Noto Serif KR",Georgia,serif;
+    font-weight:700;
+    letter-spacing:-.02em;
+    line-height:1.35;
+    margin:0;
+    color:var(--navy-900);
+  }
+  p{margin:0}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:700;letter-spacing:.14em;
+    color:var(--accent);text-transform:uppercase;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--accent)}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:14px 26px;border-radius:8px;font-weight:700;font-size:15px;
+    border:1px solid transparent;cursor:pointer;transition:.18s ease;
+    font-family:inherit;
+  }
+  .btn-primary{background:var(--navy-800);color:#fff}
+  .btn-primary:hover{background:var(--navy-700);transform:translateY(-1px);box-shadow:var(--shadow-md)}
+  .btn-ghost{background:transparent;color:var(--navy-800);border-color:rgba(18,51,84,.28)}
+  .btn-ghost:hover{background:var(--bg-tint);border-color:var(--navy-800)}
+  .btn-light{background:#fff;color:var(--navy-900)}
+  .btn-light:hover{transform:translateY(-1px);box-shadow:0 12px 30px rgba(0,0,0,.25)}
+  .btn-outline-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.42)}
+  .btn-outline-light:hover{background:rgba(255,255,255,.1);border-color:#fff}
+
+  /* ── header ── */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.94);
+    backdrop-filter:saturate(180%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:baseline;gap:10px}
+  .brand-name{font-family:"Nanum Myeongjo",serif;font-size:21px;font-weight:700;color:var(--navy-900);letter-spacing:-.02em}
+  .brand-sub{font-size:12px;color:var(--ink-faint);letter-spacing:.06em}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{font-size:15px;font-weight:600;color:var(--ink-soft);transition:color .15s}
+  .nav-links a:hover{color:var(--navy-800)}
+  .nav-cta{padding:10px 20px;font-size:14px}
+  .nav-toggle{display:none;background:none;border:0;padding:8px;cursor:pointer}
+  .nav-toggle span{display:block;width:22px;height:2px;background:var(--navy-900);margin:5px 0;transition:.2s}
+
+  /* ── hero ── */
+  .hero{
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(900px 480px at 82% 12%, rgba(179,137,79,.16), transparent 60%),
+      linear-gradient(160deg, #143a5e 0%, #12314f 55%, #0b2239 100%);
+    background-color:var(--navy-900);
+    color:#fff;
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,transparent 70%,rgba(0,0,0,.18));
+    pointer-events:none;
+  }
+  .hero-inner{
+    position:relative;z-index:1;
+    display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;
+    padding:96px 0 104px;
+  }
+  .hero h1{color:#fff;font-size:clamp(32px,4.4vw,52px);margin:20px 0 22px}
+  .hero h1 em{font-style:normal;color:var(--accent-soft);}
+  .hero-lead{color:rgba(255,255,255,.82);font-size:17px;max-width:33em}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+  .hero-card{
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.16);
+    border-radius:var(--radius);
+    padding:30px;
+    backdrop-filter:blur(6px);
+  }
+  .hero-card h3{color:#fff;font-size:17px;margin-bottom:18px}
+  .hero-list{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+  .hero-list li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:rgba(255,255,255,.86)}
+  .check{
+    flex:none;width:20px;height:20px;border-radius:50%;
+    background:rgba(179,137,79,.9);color:#fff;
+    display:grid;place-items:center;font-size:11px;font-weight:700;margin-top:3px;
+  }
+
+  /* ── stats ── */
+  .stats{background:var(--navy-800);border-top:1px solid rgba(255,255,255,.1)}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.12)}
+  .stat{background:var(--navy-800);padding:34px 20px;text-align:center}
+  .stat-num{font-family:"Nanum Myeongjo",serif;font-size:34px;font-weight:700;color:#fff;line-height:1.1}
+  .stat-num span{font-size:18px;color:var(--accent-soft);margin-left:2px}
+  .stat-label{font-size:13.5px;color:rgba(255,255,255,.66);margin-top:8px;letter-spacing:.02em}
+
+  /* ── sections ── */
+  section{padding:96px 0}
+  .sec-head{max-width:760px;margin-bottom:52px}
+  .sec-head h2{font-size:clamp(26px,3.2vw,38px);margin:16px 0 18px}
+  .sec-head p{color:var(--ink-soft);font-size:17px}
+  .tint{background:var(--bg-tint)}
+
+  /* ── services ── */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:34px 30px;transition:.22s ease;position:relative;overflow:hidden;
+  }
+  .card::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,var(--navy-700),var(--accent));
+    transform:scaleX(0);transform-origin:left;transition:transform .3s ease;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:transparent}
+  .card:hover::before{transform:scaleX(1)}
+  .card-icon{
+    width:46px;height:46px;border-radius:10px;background:var(--bg-tint);
+    display:grid;place-items:center;margin-bottom:20px;color:var(--navy-700);
+  }
+  .card h3{font-size:20px;margin-bottom:12px}
+  .card p{color:var(--ink-soft);font-size:15px;margin-bottom:18px}
+  .tags{display:flex;flex-wrap:wrap;gap:7px}
+  .tag{
+    font-size:12.5px;font-weight:600;color:var(--navy-700);
+    background:rgba(40,89,140,.08);padding:5px 11px;border-radius:100px;
+  }
+
+  /* ── process ── */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s}
+  .step{position:relative;padding-top:26px}
+  .step::before{
+    counter-increment:s;content:"0" counter(s);
+    font-family:"Nanum Myeongjo",serif;font-size:15px;font-weight:700;
+    color:var(--accent);letter-spacing:.08em;
+  }
+  .step::after{
+    content:"";position:absolute;top:44px;left:0;width:100%;height:1px;
+    background:linear-gradient(90deg,var(--line),transparent);
+  }
+  .step h3{font-size:17px;margin:16px 0 10px}
+  .step p{font-size:14.5px;color:var(--ink-soft)}
+
+  /* ── profile ── */
+  .profile-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start}
+  .portrait{
+    aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;
+    background:linear-gradient(160deg,#e8edf3,#cdd8e4);
+    display:grid;place-items:center;text-align:center;color:var(--ink-faint);
+    border:1px solid var(--line);
+  }
+  .portrait .ph-mark{font-size:13px;letter-spacing:.04em;padding:0 20px}
+  .portrait svg{opacity:.35;margin-bottom:10px}
+  .contact-mini{margin-top:22px;display:grid;gap:10px;font-size:14.5px;color:var(--ink-soft)}
+  .contact-mini div{display:flex;gap:10px}
+  .contact-mini b{color:var(--navy-900);font-weight:700;min-width:62px}
+  .quote{
+    border-left:3px solid var(--accent);padding:4px 0 4px 22px;
+    font-family:"Nanum Myeongjo",serif;font-size:20px;line-height:1.6;
+    color:var(--navy-900);margin-bottom:34px;
+  }
+  .timeline{list-style:none;padding:0;margin:0}
+  .tl-group{margin-bottom:34px}
+  .tl-title{
+    font-size:13px;font-weight:800;letter-spacing:.12em;color:var(--accent);
+    text-transform:uppercase;margin-bottom:16px;
+  }
+  .tl-item{display:grid;grid-template-columns:96px 1fr;gap:18px;padding:11px 0;border-top:1px solid var(--line)}
+  .tl-item:first-of-type{border-top:0}
+  .tl-year{font-size:14px;font-weight:700;color:var(--ink-faint);font-variant-numeric:tabular-nums}
+  .tl-desc{font-size:15.5px;color:var(--ink)}
+
+  /* ── FAQ ── */
+  .faq{max-width:860px}
+  details{
+    border-bottom:1px solid var(--line);background:transparent;
+  }
+  details summary{
+    list-style:none;cursor:pointer;padding:24px 44px 24px 0;position:relative;
+    font-size:17px;font-weight:700;color:var(--navy-900);
+  }
+  details summary::-webkit-details-marker{display:none}
+  details summary::after{
+    content:"";position:absolute;right:6px;top:32px;
+    width:10px;height:10px;border-right:2px solid var(--ink-faint);border-bottom:2px solid var(--ink-faint);
+    transform:rotate(45deg);transition:transform .22s ease;
+  }
+  details[open] summary::after{transform:rotate(-135deg);top:36px}
+  details[open] summary{color:var(--navy-700)}
+  .faq-body{padding:0 40px 26px 0;color:var(--ink-soft);font-size:15.5px}
+  .faq-body p+p{margin-top:12px}
+
+  /* ── contact ── */
+  .contact{background:var(--bg-deep);color:#fff}
+  .contact h2{color:#fff}
+  .contact .sec-head p{color:rgba(255,255,255,.72)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:start}
+  .info-block{margin-bottom:30px}
+  .info-block h4{color:#fff;font-size:15px;margin-bottom:10px}
+  .info-block p{color:rgba(255,255,255,.75);font-size:15px}
+  .info-block a{color:var(--accent-soft);border-bottom:1px solid rgba(233,220,198,.4)}
+  .map{
+    height:190px;border-radius:10px;margin-top:8px;
+    background:repeating-linear-gradient(45deg,rgba(255,255,255,.045) 0 14px,rgba(255,255,255,.08) 14px 28px);
+    border:1px solid rgba(255,255,255,.16);
+    display:grid;place-items:center;color:rgba(255,255,255,.5);font-size:13.5px;text-align:center;padding:0 20px;
+  }
+  form{
+    background:#fff;border-radius:var(--radius);padding:34px;color:var(--ink);
+    box-shadow:0 30px 60px rgba(0,0,0,.28);
+  }
+  form h3{font-size:20px;margin-bottom:6px}
+  .form-note{font-size:13.5px;color:var(--ink-faint);margin-bottom:24px}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-size:13.5px;font-weight:700;color:var(--navy-900);margin-bottom:7px}
+  .field label .req{color:#c0392b;margin-left:3px}
+  .field input,.field select,.field textarea{
+    width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:8px;
+    font-family:inherit;font-size:15px;color:var(--ink);background:#fff;transition:.15s;
+  }
+  .field textarea{resize:vertical;min-height:110px}
+  .field input:focus,.field select:focus,.field textarea:focus{
+    outline:none;border-color:var(--navy-600);box-shadow:0 0 0 3px rgba(40,89,140,.12)
+  }
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .consent{display:flex;gap:9px;align-items:flex-start;font-size:13px;color:var(--ink-soft);margin:6px 0 20px}
+  .consent input{width:16px;height:16px;flex:none;margin-top:3px;accent-color:var(--navy-700)}
+  form .btn{width:100%}
+  .form-status{margin-top:14px;font-size:14px;text-align:center;min-height:20px}
+  .form-status.ok{color:#1f7a4d}
+  .form-status.err{color:#c0392b}
+
+  /* ── footer ── */
+  footer{background:#081a2c;color:rgba(255,255,255,.55);padding:44px 0;font-size:13.5px}
+  .foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-start}
+  .foot-brand{font-family:"Nanum Myeongjo",serif;font-size:17px;color:#fff;margin-bottom:10px}
+  .foot p{max-width:52em;line-height:1.75}
+  .disclaimer{margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:12.5px;color:rgba(255,255,255,.42)}
+
+  /* ── reveal ── */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+  }
+
+  /* ── responsive ── */
+  @media (max-width:980px){
+    .hero-inner{grid-template-columns:1fr;gap:40px;padding:72px 0 80px}
+    .profile-grid{grid-template-columns:1fr;gap:40px}
+    .portrait{max-width:340px}
+    .contact-grid{grid-template-columns:1fr;gap:36px}
+    .cards{grid-template-columns:1fr;gap:18px}
+    .steps{grid-template-columns:1fr 1fr;gap:28px}
+    .stats-grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:640px){
+    section{padding:64px 0}
+    .wrap{padding:0 20px}
+    .nav-links{
+      display:none;position:absolute;top:72px;left:0;right:0;
+      background:#fff;border-bottom:1px solid var(--line);
+      flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 18px;
+      box-shadow:var(--shadow-md);
+    }
+    .nav-links.open{display:flex}
+    .nav-links a{padding:13px 0;border-bottom:1px solid var(--line)}
+    .nav-links .nav-cta{margin-top:12px;border-bottom:0;justify-content:center}
+    .nav-toggle{display:block}
+    .steps{grid-template-columns:1fr}
+    .step::after{display:none}
+    .row2{grid-template-columns:1fr}
+    .tl-item{grid-template-columns:1fr;gap:2px}
+    form{padding:26px 22px}
+    .hero-actions .btn{flex:1 1 100%}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand">
+      <span class="brand-name">김종엽 세무사</span>
+      <span class="brand-sub">양도 · 상속 · 증여</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#services">전문 분야</a>
+      <a href="#process">상담 절차</a>
+      <a href="#profile">약력</a>
+      <a href="#faq">자주 묻는 질문</a>
+      <a href="#contact" class="btn btn-primary nav-cta">상담 문의</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" style="padding:0">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="eyebrow">양도 · 상속 · 증여세 전문</span>
+        <h1>세금은 <em>신고할 때</em>가 아니라<br>결정하기 전에 정해집니다.</h1>
+        <p class="hero-lead">
+          부동산 양도, 상속 개시, 자녀 증여. 한 번의 판단이 수천만 원의 세금을 가릅니다.
+          계약서에 도장을 찍기 전에 검토하면 합법적으로 줄일 수 있는 세금이,
+          신고 기한이 닥친 뒤에는 손쓸 수 없게 되는 경우가 많습니다.
+          김종엽 세무사가 사전 설계부터 신고, 사후 대응까지 함께합니다.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-light">상담 신청하기</a>
+          <a href="#services" class="btn btn-outline-light">전문 분야 보기</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <h3>이런 경우에 상담하세요</h3>
+        <ul class="hero-list">
+          <li><span class="check">✓</span><span>부동산 매도를 앞두고 양도세가 얼마나 나올지 모를 때</span></li>
+          <li><span class="check">✓</span><span>1세대 1주택 비과세·장기보유특별공제 적용이 애매할 때</span></li>
+          <li><span class="check">✓</span><span>상속이 개시되어 6개월 신고 기한이 다가올 때</span></li>
+          <li><span class="check">✓</span><span>자녀에게 현금·부동산·주식을 증여하려 할 때</span></li>
+          <li><span class="check">✓</span><span>세무서에서 해명 안내문이나 조사 통지를 받았을 때</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="wrap" style="padding-left:0;padding-right:0">
+      <div class="stats-grid">
+        <div class="stat"><div class="stat-num">00<span>년</span></div><div class="stat-label">세무 실무 경력</div></div>
+        <div class="stat"><div class="stat-num">000<span>건+</span></div><div class="stat-label">양도·상속·증여 신고</div></div>
+        <div class="stat"><div class="stat-num">00<span>건</span></div><div class="stat-label">불복청구 수행</div></div>
+        <div class="stat"><div class="stat-num">1<span>:1</span></div><div class="stat-label">세무사 직접 상담</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Services</span>
+        <h2>재산 관련 세금, 세 갈래를 모두 봅니다</h2>
+        <p>양도·상속·증여는 따로 떨어진 문제가 아닙니다. 지금의 증여가 나중의 상속세를 바꾸고, 상속받은 자산의 취득가액이 훗날 양도세를 좌우합니다. 세 가지를 한 흐름으로 보고 설계합니다.</p>
+      </div>
+      <div class="cards">
+
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M10 21v-6h4v6"/></svg>
+          </div>
+          <h3>양도소득세</h3>
+          <p>매도 전 사전 시뮬레이션으로 예상 세액을 확인하고, 비과세·감면 요건을 빠짐없이 검토합니다. 계약 시점과 잔금일 조정만으로도 세액이 달라집니다.</p>
+          <div class="tags">
+            <span class="tag">1세대 1주택 비과세</span>
+            <span class="tag">장기보유특별공제</span>
+            <span class="tag">다주택 중과 판정</span>
+            <span class="tag">일시적 2주택</span>
+            <span class="tag">토지·상가 양도</span>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v6c0 4.5-3.2 7.4-8 8-4.8-.6-8-3.5-8-8V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3>상속세</h3>
+          <p>상속개시일로부터 6개월. 짧은 기한 안에 재산 확인, 평가, 공제 적용, 분할 협의까지 마쳐야 합니다. 재산 조회부터 신고까지 전 과정을 대리합니다.</p>
+          <div class="tags">
+            <span class="tag">상속재산 조회</span>
+            <span class="tag">부동산 감정평가</span>
+            <span class="tag">배우자상속공제</span>
+            <span class="tag">가업상속공제</span>
+            <span class="tag">연부연납</span>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M3 12h18"/><path d="M12 8v13"/><path d="M12 8S9.5 3 7.5 4.5 9 8 12 8zm0 0s2.5-5 4.5-3.5S15 8 12 8z"/></svg>
+          </div>
+          <h3>증여세</h3>
+          <p>10년 단위 증여공제를 활용한 분산 증여, 부담부증여, 저가양수 등 상황에 맞는 방식을 비교해 장기 절세 플랜을 세웁니다.</p>
+          <div class="tags">
+            <span class="tag">사전증여 설계</span>
+            <span class="tag">부담부증여</span>
+            <span class="tag">차용증·자금출처</span>
+            <span class="tag">가족 간 거래</span>
+            <span class="tag">주식 증여</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="tint">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Process</span>
+        <h2>상담은 이렇게 진행됩니다</h2>
+        <p>처음 연락 주신 순간부터 신고가 끝날 때까지, 담당 세무사가 직접 응대합니다.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <h3>문의 접수</h3>
+          <p>전화 또는 아래 상담 폼으로 상황을 알려주시면, 영업일 기준 1일 이내에 연락드립니다.</p>
+        </div>
+        <div class="step reveal">
+          <h3>자료 검토 · 세액 산출</h3>
+          <p>등기부등본, 계약서, 취득 당시 자료를 확인해 예상 세액과 절세 가능 범위를 계산합니다.</p>
+        </div>
+        <div class="step reveal">
+          <h3>대안 비교 상담</h3>
+          <p>선택 가능한 방안을 세액과 위험 요소까지 함께 비교해 설명드리고, 함께 결정합니다.</p>
+        </div>
+        <div class="step reveal">
+          <h3>신고 · 사후 관리</h3>
+          <p>신고서 작성과 제출을 대리하고, 이후 세무서 해명 요구나 조사에도 끝까지 대응합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFILE -->
+  <section id="profile">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Profile</span>
+        <h2>세무사 김종엽</h2>
+      </div>
+      <div class="profile-grid">
+        <div class="reveal">
+          <div class="portrait">
+            <div>
+              <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8.5" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+              <div class="ph-mark">프로필 사진이 들어갈 자리입니다</div>
+            </div>
+          </div>
+          <div class="contact-mini">
+            <div><b>사무소</b><span>○○세무회계사무소</span></div>
+            <div><b>전화</b><span>02-000-0000</span></div>
+            <div><b>이메일</b><span>kjytax@gmail.com</span></div>
+            <div><b>상담시간</b><span>평일 09:00 – 18:00</span></div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <p class="quote">
+            “세금 상담에서 가장 중요한 건 계산이 아니라 질문입니다.<br>
+            무엇을 놓치고 있는지 먼저 찾아내는 것이 제 일입니다.”
+          </p>
+
+          <div class="tl-group">
+            <div class="tl-title">학력 및 자격</div>
+            <ul class="timeline">
+              <li class="tl-item"><span class="tl-year">0000</span><span class="tl-desc">○○대학교 ○○학과 졸업</span></li>
+              <li class="tl-item"><span class="tl-year">0000</span><span class="tl-desc">제○○회 세무사 자격시험 합격</span></li>
+              <li class="tl-item"><span class="tl-year">0000</span><span class="tl-desc">한국세무사회 등록 (등록번호 0000)</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-group">
+            <div class="tl-title">주요 경력</div>
+            <ul class="timeline">
+              <li class="tl-item"><span class="tl-year">0000–0000</span><span class="tl-desc">○○세무법인 재산세제팀</span></li>
+              <li class="tl-item"><span class="tl-year">0000–0000</span><span class="tl-desc">○○세무서 재산세과 근무</span></li>
+              <li class="tl-item"><span class="tl-year">0000–현재</span><span class="tl-desc">○○세무회계사무소 대표세무사</span></li>
+            </ul>
+          </div>
+
+          <div class="tl-group">
+            <div class="tl-title">활동</div>
+            <ul class="timeline">
+              <li class="tl-item"><span class="tl-year">현재</span><span class="tl-desc">한국세무사회 정회원</span></li>
+              <li class="tl-item"><span class="tl-year">현재</span><span class="tl-desc">○○구청 지방세 심의위원</span></li>
+              <li class="tl-item"><span class="tl-year">현재</span><span class="tl-desc">○○협회 세무 자문위원</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="tint">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2>자주 묻는 질문</h2>
+        <p>상담 전에 많이 물어보시는 내용을 정리했습니다.</p>
+      </div>
+      <div class="faq reveal">
+
+        <details open>
+          <summary>상담료는 얼마인가요?</summary>
+          <div class="faq-body">
+            <p>첫 유선 상담은 무료입니다. 상황을 듣고 검토가 필요한 사안인지, 어느 정도 비용이 드는지 먼저 안내해 드립니다.</p>
+            <p>자료 검토와 세액 산출이 필요한 정식 상담은 사안의 복잡도에 따라 비용이 달라지며, 진행 전에 반드시 금액을 먼저 알려드립니다. 동의 없이 비용이 발생하는 일은 없습니다.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>집을 팔기로 계약했는데, 지금 상담해도 늦지 않나요?</summary>
+          <div class="faq-body">
+            <p>계약 후라도 잔금일 조정, 필요경비 입증자료 확보, 감면 요건 확인 등 할 수 있는 일이 남아 있습니다. 다만 계약 전에 오시는 것이 선택지가 가장 많습니다.</p>
+            <p>이미 잔금까지 치르셨다면 신고 단계에서 공제와 필요경비를 최대한 반영하는 방향으로 도와드립니다.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>상속세 신고 기한은 언제까지인가요?</summary>
+          <div class="faq-body">
+            <p>상속개시일(사망일)이 속한 달의 말일부터 6개월 이내입니다. 상속인이 모두 외국에 거주하는 경우에는 9개월입니다.</p>
+            <p>재산 조회와 감정평가, 상속인 간 분할 협의에 생각보다 시간이 걸리므로 기한 2~3개월 전에는 상담을 시작하시길 권합니다.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>상속재산이 얼마 안 되는데 신고해야 하나요?</summary>
+          <div class="faq-body">
+            <p>배우자와 자녀가 있는 경우 일괄공제와 배우자상속공제를 합쳐 최소 10억 원까지는 상속세가 나오지 않는 것이 일반적입니다.</p>
+            <p>다만 세금이 없더라도 부동산이 포함되어 있다면 신고해 두는 편이 유리할 수 있습니다. 신고한 평가액이 나중에 그 부동산을 팔 때 취득가액으로 인정되어 양도세를 줄여주기 때문입니다. 구체적인 판단은 상담을 통해 안내드립니다.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>자녀에게 증여할 때 얼마까지 세금이 없나요?</summary>
+          <div class="faq-body">
+            <p>성년 자녀는 10년간 5천만 원, 미성년 자녀는 2천만 원까지 증여재산공제가 적용됩니다. 혼인·출산 시에는 별도의 추가 공제도 활용할 수 있습니다.</p>
+            <p>공제 한도는 10년 단위로 다시 생기므로, 이른 시점부터 나누어 증여하는 것이 유리한 경우가 많습니다. 다만 증여 후 10년 이내에 상속이 개시되면 상속재산에 합산되므로 시기 설계가 중요합니다.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>세무서에서 해명 안내문을 받았습니다. 어떻게 해야 하나요?</summary>
+          <div class="faq-body">
+            <p>먼저 안내문에 적힌 회신 기한을 확인하시고, 임의로 답변서를 보내기 전에 상담을 받으시길 권합니다. 초기 소명 내용이 이후 절차 전체의 기준이 되기 때문입니다.</p>
+            <p>소명 단계부터 과세전적부심사, 이의신청, 심판청구까지 단계별로 대응을 대리해 드립니다.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>지방에 살고 있는데 방문 없이 상담이 가능한가요?</summary>
+          <div class="faq-body">
+            <p>가능합니다. 전화와 이메일, 화상 상담으로 진행하며 자료는 사진이나 파일로 받습니다. 신고 대리도 비대면으로 처리할 수 있습니다.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Contact</span>
+        <h2>상담 문의</h2>
+        <p>상황을 간단히 적어 보내주시면, 영업일 기준 1일 이내에 연락드립니다.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="reveal">
+          <div class="info-block">
+            <h4>전화 상담</h4>
+            <p><a href="tel:02-000-0000">02-000-0000</a> · 평일 09:00 – 18:00 (점심 12:00 – 13:00)</p>
+          </div>
+          <div class="info-block">
+            <h4>이메일</h4>
+            <p><a href="mailto:kjytax@gmail.com">kjytax@gmail.com</a></p>
+          </div>
+          <div class="info-block">
+            <h4>오시는 길</h4>
+            <p>서울특별시 ○○구 ○○로 000, ○○빌딩 0층<br>
+               ○○역 0번 출구에서 도보 5분 · 건물 지하 주차 가능</p>
+            <div class="map">지도 이미지 또는 지도 서비스 embed가 들어갈 자리입니다</div>
+          </div>
+        </div>
+
+        <form id="inquiryForm" novalidate>
+          <h3>상담 신청서</h3>
+          <p class="form-note">* 표시는 필수 입력 항목입니다.</p>
+
+          <div class="row2">
+            <div class="field">
+              <label for="f-name">성함<span class="req">*</span></label>
+              <input type="text" id="f-name" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-phone">연락처<span class="req">*</span></label>
+              <input type="tel" id="f-phone" name="phone" placeholder="010-0000-0000" autocomplete="tel" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="f-email">이메일</label>
+            <input type="email" id="f-email" name="email" autocomplete="email">
+          </div>
+
+          <div class="field">
+            <label for="f-type">상담 분야<span class="req">*</span></label>
+            <select id="f-type" name="type" required>
+              <option value="">선택해 주세요</option>
+              <option>양도소득세</option>
+              <option>상속세</option>
+              <option>증여세</option>
+              <option>세무조사 · 불복청구</option>
+              <option>기타 / 잘 모르겠음</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="f-msg">상담 내용<span class="req">*</span></label>
+            <textarea id="f-msg" name="message" placeholder="예) 2015년에 취득한 아파트를 올해 안에 매도할 예정입니다. 현재 2주택인데 양도세가 얼마나 나올지 궁금합니다." required></textarea>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" id="f-consent" required>
+            <span>상담 진행을 위한 개인정보 수집·이용에 동의합니다. 수집한 정보는 상담 목적으로만 사용하며, 상담 종료 후 파기합니다.</span>
+          </label>
+
+          <button type="submit" class="btn btn-primary">상담 신청 보내기</button>
+          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div class="foot-brand">김종엽 세무사 · ○○세무회계사무소</div>
+      <p>서울특별시 ○○구 ○○로 000, ○○빌딩 0층 · 사업자등록번호 000-00-00000 · 세무사 등록번호 0000</p>
+      <p>Tel. 02-000-0000 · kjytax@gmail.com</p>
+    </div>
+    <div style="text-align:right">
+      <p>&copy; 2026 김종엽 세무사</p>
+    </div>
+  </div>
+  <div class="wrap disclaimer">
+    본 웹사이트에 게시된 내용은 일반적인 세무 정보를 제공할 목적으로 작성된 것으로, 개별 사안에 대한 세무 자문이 아닙니다.
+    구체적인 사실관계에 따라 결론이 달라질 수 있으므로, 실제 의사결정 전에는 반드시 개별 상담을 받으시기 바랍니다.
+  </div>
+</footer>
+
+<script>
+(function(){
+  // 모바일 메뉴
+  var toggle = document.getElementById('navToggle');
+  var links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  links.addEventListener('click', function(e){
+    if(e.target.tagName === 'A') { links.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); }
+  });
+
+  // 스크롤 등장 효과
+  var items = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px'});
+    items.forEach(function(el){ io.observe(el); });
+  } else {
+    items.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  // FAQ 아코디언: 한 번에 하나만 열기
+  var faqs = document.querySelectorAll('#faq details');
+  faqs.forEach(function(d){
+    d.addEventListener('toggle', function(){
+      if(d.open){ faqs.forEach(function(o){ if(o!==d) o.open = false; }); }
+    });
+  });
+
+  // 상담 폼 → 메일 작성으로 연결 (서버 없이 동작)
+  var form = document.getElementById('inquiryForm');
+  var status = document.getElementById('formStatus');
+  var RECIPIENT = 'kjytax@gmail.com';
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name    = form.name.value.trim();
+    var phone   = form.phone.value.trim();
+    var email   = form.email.value.trim();
+    var type    = form.type.value;
+    var message = form.message.value.trim();
+    var consent = document.getElementById('f-consent').checked;
+
+    if(!name || !phone || !type || !message){
+      status.className = 'form-status err';
+      status.textContent = '필수 항목을 모두 입력해 주세요.';
+      return;
+    }
+    if(!consent){
+      status.className = 'form-status err';
+      status.textContent = '개인정보 수집·이용 동의가 필요합니다.';
+      return;
+    }
+
+    var subject = '[상담 신청] ' + type + ' - ' + name;
+    var body =
+      '성함: ' + name + '\n' +
+      '연락처: ' + phone + '\n' +
+      '이메일: ' + (email || '-') + '\n' +
+      '상담 분야: ' + type + '\n' +
+      '─────────────────────\n' +
+      message + '\n';
+
+    window.location.href = 'mailto:' + RECIPIENT +
+      '?subject=' + encodeURIComponent(subject) +
+      '&body=' + encodeURIComponent(body);
+
+    status.className = 'form-status ok';
+    status.textContent = '메일 작성 창이 열립니다. 열리지 않으면 ' + RECIPIENT + ' 으로 보내주세요.';
+  });
+})();
+</script>
+
+</body>
+</html>
